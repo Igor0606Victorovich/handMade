@@ -6,6 +6,7 @@ body {
 }*/
 /** {box-sizing:border-box}
 */
+
 .img {
 	max-width: 100%;
 	height: auto;
@@ -20,40 +21,48 @@ body {
 .header { 
 	background: #fff;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: sticky;
-	top: 0;
-	z-index: 3;
-	padding-top: 7px;
-	padding-bottom: 4px;
-/*	display: flex;
-	justify-content: space-between;
-*/}
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+.main-div {
+    flex-grow: 1;
+}
+.main-div, ul{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-div li{
+    margin-left: 1em;
+}
+.main-div li:last-child{
+    margin-left: 0;
+}
+.main-div a{
+    padding: 2em 3em;
+}
 .logo {
     width: 100%;
-    height: 100%;
 }
 .logo:hover {
 	transform: scale(0.7);
 	transition: 2s;
 }
-.nav {
-	font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-/*	width:79%;
-	/*text-align:right;*/
-/*	vertical-align:top;
-*/	/*height:70px;*/
- 	/*padding-top:14px; */
-}
+
 .nav1:hover { 
 	color: #bc8f8f;
 }
 .nav1 {
 	text-decoration: none;
-	margin-right: 90px;
 	color: #2a1a2a;
 }
 @keyframes bounce {
@@ -73,9 +82,7 @@ body {
 	}
 }
 .nav2 {
-	margin-right: 15px;
-  /*  width: 5%;
-    height: 5%;*/
+	margin-left: 2em;
 }
 .nav2:hover {
 	animation: bounce 1s;
@@ -127,21 +134,21 @@ body {
 .slideshow-item-text {
     max-width: 50%;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 1.5em;
+    left: 2em;
     background-color: rgba(0,0,0,0.7);
     color: #fff;
-    padding: 20px 30px;
+    padding: 1.5em 3em;
     font-family: Verdana, sans-serif;   
 }
 .slideshow-item-text h5 {
-    font-size: 22px;
-    margin: 0 0 10px 0;
+    font-size: 3em;
+    margin: 0 0 1em 0;
     color: #BFE2FF;
 }
 .slideshow-item-text p {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
 
 @keyframes slideanim {
@@ -174,7 +181,7 @@ body {
     margin-top: 1em;
  }
  .h1{ 
-    margin-top: 2em;
+    margin-top: 1.3em;
 }
 .grid-container{
     max-width: 1240px;
@@ -200,13 +207,23 @@ body {
 @media (max-width: 1199.98px){
     .grid-container{
     max-width: 1051px;
-}   
+    } 
+    .slideshow{
+    height: 25em;        
+    }  
     .slideshow-item{
         max-width: 100%;
     }
     .slideshow-item-text{
         max-width: 75%;
+        bottom: 1.2em;
+        left: 1.2em;
+        padding: 1em 2.3em;
     }
+    .logo{
+        width: 80%;
+    }
+
 }
 @media (max-width: 1099px) {
     .grid-container{
@@ -215,29 +232,74 @@ body {
     .slideshow{
     height: 20em;        
     }
+    .header{
+        font-size: 0.7em;
+    }
+      .logo{
+        width: 70%;
+    }
+    h1  {
+        font-size: 1.5em;
+        margin-top: 1em;     
+    }
+    h3  {
+       font-size: 1.1em;
+       margin-top: 1em;   
+    }
+
 }
 @media (max-width: 767.98px) { 
     .item-text{
        font-size:  0.7em;
     }
-    
-    h1 {
+    .slideshow-item-text{
+        max-width: 75%;
+        bottom: 0.8em;
+        left: 0.8em;
+        padding: 0.7em 1.4em;
+        font-size: 0.7em;
+    }
+    .slideshow{
+        height: 15em;        
+    }
+    h1  {
         font-size: 0.9em;
-        margin-top: 10px;     
+        margin-top: 1em;     
     }
-    h3{
+    h3  {
        font-size: 0.7em;
-       margin-top: 10px;   
+       margin-top: 1em;   
     }
-    .nav{
-        font-size: 0.5em;
+    .header{
+        font-size: 0.6em;
     }
-
+    .logo{
+        width: 50%;
+    }
+    .nav2{
+        width: 13%;
+        margin-left: 1.3em;
+    }
+    .main-div a{
+    padding: 0.3em 0.3em;
+    }
+    .main-div ul{
+    margin-right: 0.7em;
+    }
+    .messanger-div{
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
 }
 @media (max-width: 575.98px){
      .item-text{
        font-size:  0.5em;
     }
+    .header{
+        font-size: 0.4em;
+    }
+
     .slideshow{
        height: 10em; 
     }
@@ -251,6 +313,14 @@ body {
         font-size: 0.5em;
         padding: 1em;
     }
+    .logo{
+        width: 40%;
+    }
+    .nav2{
+        width: 12%;
+        margin-left: 1.1em;
+    }
+
 }
 
 
