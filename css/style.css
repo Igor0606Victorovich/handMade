@@ -12,12 +12,10 @@ body {
 	height: auto;
 }
 .container {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 2em;
 	max-width: 1240px;
 	line-height: 1.5;
 }
-
 .header { 
 	background: #fff;
 	display: flex;
@@ -42,14 +40,14 @@ body {
     list-style: none;
 }
 .main-div li{
-    margin-left: 1em;
+    margin-left: 5.5em;
 }
-.main-div li:last-child{
+/*.main-div li:last-child{
     margin-left: 0;
 }
-.main-div a{
+*//*.main-div a{
     padding: 2em 3em;
-}
+}*/
 .logo {
     width: 100%;
 }
@@ -249,6 +247,9 @@ body {
 
 }
 @media (max-width: 767.98px) { 
+    .container {
+    margin: 1em;
+    }
     .item-text{
        font-size:  0.7em;
     }
@@ -280,10 +281,10 @@ body {
         width: 13%;
         margin-left: 1.3em;
     }
-    .main-div a{
+/*    .main-div a{
     padding: 0.3em 0.3em;
     }
-    .main-div ul{
+*/    .main-div ul{
     margin-right: 0.7em;
     }
     .messanger-div{
@@ -293,7 +294,7 @@ body {
     }
 }
 @media (max-width: 575.98px){
-     .item-text{
+    .item-text{
        font-size:  0.5em;
     }
     .header{
