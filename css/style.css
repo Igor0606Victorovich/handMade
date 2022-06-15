@@ -12,10 +12,10 @@ body {
 	height: auto;
 }
 .container {
-	margin: 2em;
+	margin: auto;
 	max-width: 1240px;
-	line-height: 1.5;
-}
+/*	line-height: 1.5;
+*/}
 .header { 
 	background: #fff;
 	display: flex;
