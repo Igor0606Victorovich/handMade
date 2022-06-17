@@ -10,9 +10,10 @@ body {
 .img {
 	max-width: 100%;
 	height: auto;
+    border: none;
 }
 .container {
-	margin: auto;
+	margin: 0 auto;
 	max-width: 1240px;
 /*	line-height: 1.5;
 */}
@@ -28,6 +29,9 @@ body {
     position: sticky;
     z-index: 3;
     top: 0;
+}
+ a img {
+    border: none;/* Убираем рамку */
 }
 .main-div {
     flex-grow: 1;
@@ -247,9 +251,6 @@ body {
 
 }
 @media (max-width: 767.98px) { 
-    .container {
-    margin: 1em;
-    }
     .item-text{
        font-size:  0.7em;
     }
