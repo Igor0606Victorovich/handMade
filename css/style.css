@@ -1,15 +1,19 @@
-/*@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @media 
 body {
-	font-family: Roboto, sans-serif;
-	margin: 0 auto;
-}*/
-/** {box-sizing:border-box}
-*/
+    font-family: Roboto, sans-serif;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+}
+
 
 .img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
     border: none;
 }
 .header { 
@@ -26,8 +30,8 @@ body {
     z-index: 3;
 }
 .container {
-	margin: 0 auto;
-	max-width: 1240px;
+    margin: 0 auto;
+    max-width: 1240px;
 }
 
  a img {
@@ -46,48 +50,42 @@ body {
 .main-div li{
     margin-left: 5.5em;
 }
-/*.main-div li:last-child{
-    margin-left: 0;
-}
-*//*.main-div a{
-    padding: 2em 3em;
-}*/
 .logo {
     width: 100%;
 }
 .logo:hover {
-	transform: scale(0.7);
-	transition: 2s;
+    transform: scale(0.7);
+    transition: 2s;
 }
 
 .nav1:hover { 
-	color: #bc8f8f;
+    color: #bc8f8f;
 }
 .nav1 {
-	text-decoration: none;
-	color: #2a1a2a;
+    text-decoration: none;
+    color: #2a1a2a;
 }
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
-		transform: translateY(0);
-		transform: translateY(0);
-	}
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
 
-	40% {
-		transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
+    40% {
+        transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
 
-	80% {
-		transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+    80% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
 }
 .nav2 {
-	margin-left: 2em;
+    margin-left: 2em;
 }
 .nav2:hover {
-	animation: bounce 1s;
+    animation: bounce 1s;
 }
 .slideshow {
     width: 100%;
@@ -145,25 +143,22 @@ body {
     font-size: 1em;
     margin-bottom: 1em;
 }
-
-
-
 .slideshow-belt {
-  max-width: 50%;
   position: relative;
 }
 /* Hide the images by default */
 .mySlides-belt {
     display: none;
+    max-width: 50%;
 }
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 25%;
+  top: 35%;
   width: auto;
   margin-top: -22px;
-  padding: 7px;
+  padding: 1px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -172,7 +167,7 @@ body {
 }
 /* Position the "next button" to the right */
 .next {
-  right: 20%;
+  right: 50%;
   border-radius: 3px 0 0 3px;
 }
 /* On hover, add a black background color with a little bit see-through */
@@ -250,6 +245,33 @@ body {
 .details{
         font-size:  1em;
         line-height: 1.5;
+}
+.catalog{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.7em;
+    text-decoration: none;
+    color: #2a1a2a;
+}
+.catalog:hover {
+    color: #bc8f8f;
+}
+.finished-catalog {
+    font-family: 'Open Sans', sans-serif; 
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 3em;
+}
+footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 3em;
+    background-color: #F5F5F5;
+}
+.footer-text {
+    text-align: center;
 }
 @media (max-width: 1400px){
     .grid-container{
@@ -351,9 +373,6 @@ body {
     }
 }
 @media (max-width: 575.98px){
-    main {
-        top: 0;
-    }
     .item-text, .details{
        font-size:  0.5em;
     }
@@ -368,7 +387,7 @@ body {
        height: 10em; 
     }
     .slideshow-item{
-     	max-width: 100%;
+        max-width: 100%;
     }
     .slideshow-item-text {
         bottom: 1em;
@@ -390,26 +409,37 @@ body {
     .h3 {
         font-size: 0.8em;
     }
-/*    .scale {
-        width: 70%;
-    }*/
     .back {
         font-size: 0.8em;
     }
     .slideshow-belt {
         height: 10em; 
+        width: 100%;
     }
     .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 60%;
-      width: auto;
-      margin-top: -22px;
-      padding: 0.1em;
-      color: white;
-      font-weight: bold;
-      font-size: 12px;
-
+        cursor: pointer;
+        position: absolute;
+        top: 70%;
+        width: auto;
+        margin-top: -22px;
+        padding: 0.1em;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
     }
-
-
+    .details {
+        width: 100%;
+    }
+    .catalog {
+        font-size: 0.9em;
+    }
+    .catalog:hover {
+    color: #bc8f8f;
+    }
+    .finished-catalog {
+        font-size: 1.2em;
+    }
+    .footer-text {
+        font-size: 0.9em;
+    }
+}
