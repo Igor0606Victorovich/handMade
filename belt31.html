@@ -39,11 +39,18 @@
 		</div>
 </header>
 <br>
-<main style="font-family: 'Open Sans', sans-serif">
+<main style="font-family: 'Open Sans', sans-serif; margin-top: -2em;">
 	<br>
 	<p><a href="belts.html" class="back">Вернуться к ремням</a></p>
-	<div class="item">
-		<div class="scale"> <img src="images/belt31.jpg" style="width:80%;" alt="Рубин">
+	<div class="slideshow-belt">
+		<div class="scale mySlides-belt">
+		 <img src="images/belt31.jpg" style="width:100%;" alt="Рубин">
+		</div>
+		<div class="scale mySlides-belt">
+		 <img src="images/belt32.jpg" style="width:100%;" alt="Рубин">
+		</div>
+		<div class="scale mySlides-belt">
+		 <img src="images/belt33.jpg" style="width:100%;" alt="Рубин">
 		</div>
 		<p class="item-text">кожаный ремень "Рубин"</p>
 		<p class="item-price">5000 р.</p>
@@ -56,7 +63,39 @@
 		Наружная часть: на конце ремня тиснёный логотип компании <br><br>
 		Характеристики: регулируется по длине 87-100 см, возможно укоротить на любую длину
 		</div>
-	</div>	
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>	<!-- slideshow-container -->
+	<script type="text/javascript">
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-belt");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+	</script>
 </main>
 </div><!-- Container -->
 </body>
