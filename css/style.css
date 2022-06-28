@@ -9,8 +9,10 @@ body {
     box-sizing:border-box;
     -webkit-box-sizing: border-box;
 }
-
-
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+}
 .img {
     max-width: 100%;
     height: auto;
@@ -25,14 +27,14 @@ body {
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    position: sticky;
+    position: fixed;
     top: 0;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
     z-index: 3;
+    width: 1240px;
 }
-.container {
-    margin: 0 auto;
-    max-width: 1240px;
-}
+
 
  a img {
     border: none;/* Убираем рамку */
@@ -200,6 +202,7 @@ body {
    font-weight: bold;
    text-decoration: none;
    color: black;
+   margin-top: 6em;
 }
 .back:hover{
     color: #bc8f8f;
@@ -286,8 +289,18 @@ footer {
     .slideshow-item-text{
         max-width: 75%;
     }
+    .header {
+        max-width: 100%;
+    }
+    .back {
+        margin-top: 6em;
+    }
+
 }
 @media (max-width: 1199.98px){
+    .header {
+        max-width: 98.7%;
+    }
     .grid-container{
     max-width: 1051px;
     } 
@@ -306,6 +319,10 @@ footer {
     .logo{
         width: 80%;
     }
+        .back {
+        margin-top: 4.4em;
+    }
+
 
 }
 @media (max-width: 1099px) {
@@ -317,6 +334,7 @@ footer {
     }
     .header{
         font-size: 0.7em;
+        max-width: 98.6%;
     }
     .logo{
         width: 70%;
@@ -328,6 +346,9 @@ footer {
     h4  {
        font-size: 1.1em;
        margin-top: 1em;   
+    }
+    .back {
+        margin-top: 3em;
     }
 
 }
@@ -355,6 +376,7 @@ footer {
     }
     .header{
         font-size: 0.6em;
+        max-width: 98%;
     }
     .logo{
         width: 50%;
@@ -371,6 +393,9 @@ footer {
         padding: 0;
         text-align: right;
     }
+    .back {
+        margin-top: 2em;
+    }
 }
 @media (max-width: 575.98px){
     .item-text, .details{
@@ -381,6 +406,7 @@ footer {
     }
     .header{
         font-size: 0.4em;
+        max-width: 96.5%;
     }
 
     .slideshow{
@@ -441,5 +467,8 @@ footer {
     }
     .footer-text {
         font-size: 0.9em;
+    }
+    .back {
+        margin-top: 2em;
     }
 }
