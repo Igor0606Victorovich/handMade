@@ -16,7 +16,7 @@ body {
 .img {
     max-width: 100%;
     height: auto;
-    border: none;
+    border: 0;
 }
 .header { 
     background: #fff;
@@ -33,6 +33,17 @@ body {
     padding-bottom: 1.5em;
     z-index: 3;
     width: 1240px;
+}
+.logo-div {
+    margin-left: 1.5em;
+    text-align: left;
+}
+.messanger-div{
+    margin-right: 1.5em;
+    text-align: right;
+}
+main {
+    margin: 0.5em;
 }
 
 
@@ -152,14 +163,14 @@ body {
 .mySlides-belt {
     display: none;
     max-width: 50%;
+    object-fit: cover;
 }
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 35%;
+  top: 28%;
   width: auto;
-  margin-top: -22px;
   padding: 1px;
   color: white;
   font-weight: bold;
@@ -237,17 +248,27 @@ body {
     grid-gap: 1% ;
     grid-template-rows: 1fr 1fr; 
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5em;
+    margin-bottom: 1em;
 } 
+.show {
+    width: 200%;
+}
 .item-text{
-       font-size:  1.2em;
+    font-size:  1.2em;
 }
 
 .item-price{
-        font-size: 2em;
+    font-size: 2em;
 }  
+.object-fit {
+    width: 3em;
+    height: 23em;
+    object-fit: cover;
+}
 .details{
-        font-size:  1em;
-        line-height: 1.5;
+    font-size:  1em;
+    line-height: 1.5;
 }
 .catalog{
     font-family: 'Open Sans', sans-serif;
@@ -259,12 +280,15 @@ body {
 .catalog:hover {
     color: #bc8f8f;
 }
+.delivery-margin {
+    margin-top: 6em;
+}
 .finished-catalog {
     font-family: 'Open Sans', sans-serif; 
     text-align: center;
     font-size: 1.7em;
-    margin-bottom: 3em;
-}
+    padding-bottom: 5em;
+    }
 footer {
     position:fixed;
     bottom:0;
@@ -272,10 +296,10 @@ footer {
     width:100%;
     height: 3em;
     background-color: #F5F5F5;
-}
+    }
 .footer-text {
     text-align: center;
-}
+    }
 @media (max-width: 1400px){
     .grid-container{
     max-width: 1240px;
@@ -299,7 +323,7 @@ footer {
 }
 @media (max-width: 1199.98px){
     .header {
-        max-width: 98.7%;
+        max-width: 100%;
     }
     .grid-container{
     max-width: 1051px;
@@ -334,7 +358,7 @@ footer {
     }
     .header{
         font-size: 0.7em;
-        max-width: 98.6%;
+        max-width: 100%;
     }
     .logo{
         width: 70%;
@@ -376,7 +400,7 @@ footer {
     }
     .header{
         font-size: 0.6em;
-        max-width: 98%;
+        max-width: 100%;
     }
     .logo{
         width: 50%;
@@ -388,25 +412,31 @@ footer {
    .main-div ul{
     margin-right: 0.7em;
     }
-    .messanger-div{
-        margin: 0;
-        padding: 0;
-        text-align: right;
-    }
     .back {
         margin-top: 2em;
     }
 }
 @media (max-width: 575.98px){
+    .grid-container{
+    max-width: 100%;
+    display: grid;
+    grid-gap: 1% ;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr;
+    margin-top: 3em;
+    margin-bottom: 6em;
+    } 
     .item-text, .details{
-       font-size:  0.5em;
+       font-size:  1em;
     }
     .item-price{
-        font-size: 0.7em;
+        font-size: 1em;
+        font-weight: bold;
     }
     .header{
         font-size: 0.4em;
-        max-width: 96.5%;
+        max-width: 100%;
+        padding: 1em;
     }
 
     .slideshow{
@@ -422,8 +452,17 @@ footer {
         font-size: 0.5em;
         padding: 1em;
     }
+    a.nav1 {
+        margin-left: 0;
+    }
+    .logo-div {
+        margin: 0;
+    }
     .logo {
         width: 40%;
+    }
+    .nav1 {
+        font-size: 1.5em;
     }
     .nav2 {
         width: 12%;
@@ -471,4 +510,60 @@ footer {
     .back {
         margin-top: 2em;
     }
+    .object-fit {
+    width: 3em;
+    height: 23em;
+    object-fit: cover;
+    }
+    .mySlides-belt {
+    display: none;
+    max-width: 100%;
+    object-fit: cover;
+    }
+    .prev, .next {
+    top: 110%;
+    }
+    .next {
+    right: 1%;
+    }
+}
+
+.image {
+    cursor:pointer;
+}
+
+.popup {
+    position: absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    display:none;
+    text-align:center;
+}
+
+.popup_bg {
+    background:rgba(0,0,0,0.3);
+    position:fixed;
+    z-index:1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+  height: auto;
+}
+
+
+.popup_img {
+    position: fixed;
+    z-index:2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 70%;
+}
+
+.popup_img {
+  pointer-events: none;
 }
