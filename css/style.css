@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Igor0606Victorovich 
-Igor0606Victorovich
-/
-handMade
-Public
-Code
-Issues
-Pull requests
-Discussions
-Actions
-Projects
-1
-Wiki
-Security
-Insights
-Settings
-handMade/css/style.css
-@Igor0606Victorovich
-Igor0606Victorovich Update style.css
-Latest commit 3d83525 on Jul 20
- History
- 1 contributor
-569 lines (548 sloc)  9.31 KB
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @media 
@@ -75,6 +45,10 @@ body {
 }
 main {
     margin: 0.5em;
+    padding-top: 6em;
+}
+.main-links{
+    padding: 0;
 }
 
 
@@ -291,6 +265,7 @@ main {
 
 .item-price{
     font-size: 2em;
+    color: red;
 }  
 .object-fit {
     width: 3em;
@@ -318,14 +293,14 @@ main {
     font-family: 'Open Sans', sans-serif; 
     text-align: center;
     font-size: 1.7em;
-    padding-bottom: 5em;
+    padding-bottom: 2em;
     }
 footer {
     position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    height: 3em;
+    height: 3.5em;
     background-color: #F5F5F5;
     }
 .footer-text {
@@ -457,6 +432,9 @@ footer {
     margin-top: 3em;
     margin-bottom: 6em;
     } 
+    main {
+        padding-top: 3em;
+    }
     .item-text, .details{
        font-size:  1em;
     }
@@ -504,8 +482,12 @@ footer {
         margin-left: -3em;
     }
     .main-div li{
-    margin-left: 1.5em;
-}
+        margin-left: 1.5em;
+    }
+    .main-links{
+        padding-bottom: 2em;
+        padding-top: -2em;
+    }
     .h1 {
         font-size: 1.5em;
     }
@@ -542,8 +524,14 @@ footer {
     .finished-catalog {
         font-size: 1.2em;
     }
+    footer{
+        height: 3em;
+    }
     .footer-text {
-        font-size: 0.7em;
+        font-size: 0.8em;
+    }
+    .finished-catalog {
+        padding-bottom: 3em;
     }
     .back {
         margin-top: 2em;
