@@ -268,8 +268,8 @@ main {
     color: red;
 }  
 .object-fit {
-    width: 3em;
-    height: 23em;
+    width: 2.5em;
+    height: 19em;
     object-fit: cover;
 }
 .details{
