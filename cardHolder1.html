@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0>
+
+	<link rel="stylesheet" type="text/css" href="css/normilize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+	<title>Чехол для загранника</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<header class="header" role="banner">
+		<div class="logo-div"><a href="index.html">
+				<img src="images/logoRus.png" alt="logo" class="logo"/>
+			</a>
+		</div>
+		<div class="main-div">
+			<ul>	
+				<li><a href="index.html#catalog" class="nav1">Каталог</a></li>
+
+				<li><a href="delivery.html" class="nav1">Доставка и оплата</a></li>
+
+				<li><a href="questions.html" class="nav1">Ваши вопросы</a></li>
+			</ul>
+		</div>
+		<div class="messanger-div">
+			
+				<l><a href="https://t.me/SplusT"  alt="icon-telegram"><img src="images/icon-telegram.png" class="nav2"></a></li>
+				<l><a href="https://wa.me/+79114608407"  alt="icon-whatsapp"><img src="images/icon-whatsapp.png" class="nav2"></a></li>
+				<l><a href="mailto:isl-klg@rambler.ru"  alt="icon-mail"><img src="images/icon-mail.png" class="nav2"></a></li>
+			
+		</div>
+</header>
+<main style="font-family: 'Open Sans', sans-serif;">
+	<br>
+	<p class="back"><a href="belts.html" class="back">Вернуться к кардхолдерам</a></p>
+	<div class="slideshow-belt">
+		<div class="scale mySlides-belt">
+		 <img src="images/cardHolder1.jpg" style="width:100%;" alt="Чехол">
+		</div>
+		<div class="scale mySlides-belt">
+		 <img src="images/cardHolder2.jpg" style="width:100%;" alt="Чехол">
+		</div>
+		<div class="scale mySlides-belt">
+		 <img src="images/cardHolder3.jpg" style="width:100%;" alt="Чехол">
+		</div>
+		<p class="item-text">Чехол для загранпаспорта</p>
+		<p class="item-price">1000 р.</p>
+		<div class="details">
+		Размер: 95 x 135 мм <br><br>
+		Вес: 25 г <br><br>
+		Цвет: темно-коричневый <br><br>
+		Внешний материал: Изготовлен из кожи КРС выделки "Краст" темно-коричневого цвета обработанная финишным полуматовым лаком
+		<br><br>
+		На лицевой стороне лазерная гравировка герба РФ, на обороте слот под банковскую карту или визитку
+		</div>
+		<br><br><br>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>	<!-- slideshow-container -->
+	<script type="text/javascript">
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides-belt");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+	</script>
+</main>
+
+<footer>
+	<p class="footer-text">  © 2021 — 2022 © Кожевенная мастерская "C+T" — изделия из кожи ручной работы </p>
+</footer>
+</div><!-- Container -->
+</body>
+</html>
